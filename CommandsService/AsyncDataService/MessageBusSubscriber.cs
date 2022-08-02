@@ -72,7 +72,6 @@ namespace CommandsService.AsyncDataService
             if (_connection.IsOpen)
             {
                 _connection.Close();
-                _connection.Close();
             }
             base.Dispose();
         }
