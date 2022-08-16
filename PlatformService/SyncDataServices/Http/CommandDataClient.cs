@@ -21,7 +21,7 @@ namespace PlatformService.SyncDataServices.Http
         }
         public async Task SendPlatformToCommandAsync(PlatformReadDto platform, ILogger _logger)
         {
-            var httpContent = new StringContent(JsonSerializer.Serialize(platform), Encoding.UTF8, "applicatiom/json");
+            var httpContent = new StringContent(JsonSerializer.Serialize(platform), Encoding.UTF8, "application/json");
             
             var response = await _httpClient.PostAsync($"{_configuration["CommandService"]}", httpContent);
 
